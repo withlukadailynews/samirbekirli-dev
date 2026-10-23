@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technology, Projects & Entrepreneurship</title>
+<meta name="description" content="An unofficial informational website exploring technology projects, software development, and entrepreneurship.">
+<meta name="theme-color" content="#070b16">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #070b16;
+  --panel: #0e172a;
+  --text: #f4f7ff;
+  --muted: #9aa9c3;
+  --blue: #4d8dff;
+  --cyan: #63d8ff;
+  --border: rgba(154,183,231,.16);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+body {
+  background:
+    radial-gradient(ellipse at 12% 5%, rgba(34,86,190,.22), transparent 36%),
+    radial-gradient(ellipse at 90% 40%, rgba(42,46,145,.17), transparent 34%),
+    var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .2;
+  background-image:
+    linear-gradient(rgba(105,151,226,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(105,151,226,.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(7,11,22,.84);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+}
+
+nav {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+}
+
+nav a {
+  font-size: 13px;
+  color: var(--muted);
+  transition: color .2s;
+}
+
+nav a:hover { color: white; }
+
+nav .nav-cta {
+  color: white;
+  padding: 9px 15px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 65px;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 105px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 12px;
+  border: 1px solid rgba(92,157,255,.25);
+  border-radius: 100px;
+  background: rgba(53,113,220,.09);
+  color: #a9ceff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 12px var(--cyan);
+}
+
+h1, h2, h3 {
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+h1 {
+  font-size: clamp(43px, 6vw, 72px);
+  margin-top: 25px;
+}
+
+.gradient {
+  background: linear-gradient(100deg, #fff, #a9caff 48%, #65d8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  color: #b7c9e8;
+  font-size: 19px;
+  margin-top: 18px;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 15px;
+  margin-top: 16px;
+  max-width: 540px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn {
+  min-height: 47px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 18px;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform .2s;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.primary {
+  background: linear-gradient(110deg, #3479f6, #5b63eb);
+  box-shadow: 0 10px 30px rgba(49,103,242,.22);
+}
+
+.secondary {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.035);
+}
+
+.hero-visual {
+  position: relative;
+  max-width: 390px;
+  width: 100%;
+  justify-self: end;
+}
+
+.photo-frame {
+  padding: 9px;
+  border: 1px solid rgba(111,163,255,.28);
+  border-radius: 25px;
+  background: linear-gradient(145deg, rgba(72,127,255,.2), rgba(255,255,255,.025));
+  box-shadow: 0 30px 90px rgba(0,0,0,.35);
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 17px;
+  background: #111d33;
+}
+
+.photo-label {
+  position: absolute;
+  bottom: 22px;
+  left: -18px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: rgba(11,19,35,.95);
+  box-shadow: 0 12px 35px rgba(0,0,0,.3);
+}
+
+.photo-label strong { display: block; font-size: 13px; }
+.photo-label span { color: var(--muted); font-size: 11px; }
+
+.section {
+  padding: 78px 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-head { max-width: 670px; margin-bottom: 32px; }
+
+.kicker {
+  color: #80b5ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h2 { font-size: clamp(30px, 4vw, 42px); margin-top: 10px; }
+
+.section-desc {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 13px;
+}
+
+.about-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 22px;
+}
+
+.panel, .project-card {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(19,31,54,.9), rgba(11,17,31,.94));
+  transition: transform .25s, border-color .25s;
+}
+
+.panel { padding: 27px; }
+
+.panel:hover, .project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(91,151,255,.4);
+}
+
+.icon-box {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(83,148,255,.2);
+  border-radius: 13px;
+  background: rgba(62,128,255,.13);
+  font-size: 20px;
+}
+
+.panel h3 { font-size: 21px; letter-spacing: -.5px; }
+
+.panel p, .project-content p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+
+.tag {
+  padding: 5px 9px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: #c3d4ee;
+  font-size: 11px;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background: #111d33;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-content { padding: 24px; }
+
+.project-type {
+  color: #80b5ff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.project-content h3 { font-size: 25px; margin-top: 8px; }
+
+.project-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #9cc8ff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.project-link:hover { color: white; }
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 17px;
+}
+
+.focus-card {
+  padding: 23px;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  background: rgba(14,23,41,.72);
+}
+
+.focus-card .number { color: #6e9fff; font-size: 12px; font-weight: 700; }
+.focus-card h3 { font-size: 18px; margin-top: 13px; letter-spacing: -.4px; }
+.focus-card p { margin-top: 10px; color: var(--muted); font-size: 13px; }
+
+.notice {
+  padding: 16px 19px;
+  margin-top: 23px;
+  border-left: 2px solid var(--blue);
+  border-radius: 0 10px 10px 0;
+  background: rgba(46,91,166,.08);
+  color: #aabbd5;
+  font-size: 12px;
+}
+
+.source-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 27px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(110deg, rgba(24,43,76,.65), rgba(13,20,37,.8));
+}
+
+.source-box h3 { font-size: 19px; }
+.source-box p { margin-top: 7px; color: var(--muted); font-size: 12px; }
+
+footer {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  background: rgba(4,7,14,.35);
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer-title { font-size: 13px; font-weight: 700; }
+.footer-copy { color: #7889a5; font-size: 11px; margin-top: 6px; }
+.disclaimer { max-width: 600px; color: #8595af; font-size: 11px; text-align: right; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+@media(max-width:800px) {
+  .hero { gap: 30px; grid-template-columns: 1fr .8fr; }
+  .focus-grid { grid-template-columns: 1fr; }
+}
+
+@media(max-width:620px) {
+  .container { width: calc(100% - 32px); }
+  nav { min-height: 65px; gap: 15px; }
+  nav a { font-size: 11px; }
+  nav a:nth-child(2) { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 60px 0 65px; gap: 40px; }
+  h1 { font-size: clamp(42px, 11vw, 59px); }
+  .hero-visual { max-width: 320px; width: 82%; justify-self: center; margin-left: 10px; }
+  .section { padding: 60px 0; }
+  .about-grid, .projects-grid { grid-template-columns: 1fr; }
+  .focus-grid { grid-template-columns: 1fr; }
+  .source-box, .footer-row { flex-direction: column; align-items: flex-start; }
+  .disclaimer { text-align: left; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container" aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#interests">Interests</a>
+    <a class="nav-cta" href="#sources">Sources ↗</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container" id="home">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Independent information page</div>
+      <h1>The story behind<br><span class="gradient">Samir Bekirli.</span></h1>
+      <p class="subtitle">Technology · Development · Entrepreneurship</p>
+      <p class="description">
+        An informational profile exploring Samir Bekirli's background,
+        technology projects, and entrepreneurial interests, including
+        the work associated with Mitfly.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore Projects ↗</a>
+        <a class="btn secondary" href="#about">Learn More</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="photo-frame">
+        <img
+          class="photo"
+          src="https://res.cloudinary.com/ngxbj12i/image/upload/v1792795145/5395400624217725350_119.jpg"
+          alt="Profile image"
+          fetchpriority="high"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85';"
+        >
+      </div>
+      <div class="photo-label">
+        <strong>People & Ideas</strong>
+        <span>Technology and entrepreneurship</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">01 / Overview</span>
+        <h2>A closer look at the journey.</h2>
+        <p class="section-desc">
+          An introduction to the work, interests, and projects connected
+          with Samir Bekirli, based on publicly available information.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="panel reveal">
+          <div class="icon-box">⌘</div>
+          <h3>Technology & Development</h3>
+          <p>
+            Software development and digital products are key themes
+            of this profile. Explore projects, product ideas, and
+            technology built to address real-world needs.
+          </p>
+          <div class="tags">
+            <span class="tag">Software</span>
+            <span class="tag">Digital Products</span>
+            <span class="tag">Innovation</span>
+          </div>
+        </article>
+
+        <article class="panel reveal">
+          <div class="icon-box">↗</div>
+          <h3>Entrepreneurship</h3>
+          <p>
+            Discover projects and ideas associated with Samir Bekirli.
+            This page brings publicly available information together
+            in one place and distinguishes projects from future plans.
+          </p>
+          <div class="tags">
+            <span class="tag">Startups</span>
+            <span class="tag">Product Ideas</span>
+            <span class="tag">Technology</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">02 / Selected work</span>
+        <h2>Projects & digital work.</h2>
+        <p class="section-desc">
+          Projects and creative work featured in this informational profile.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <img
+            class="project-image"
+            src="https://res.cloudinary.com/ngxbj12i/image/upload/v1792795896/14d29865-d3ba-475d-a3a0-dfe42836cea2.jpg"
+            alt="Mitfly project image"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=85';"
+          >
+          <div class="project-content">
+            <span class="project-type">Travel technology</span>
+            <h3>Mitfly</h3>
+            <p>
+              A flight-search project focused on helping travelers
+              discover flight options and compare prices more easily.
+              Check official project channels for current details.
+            </p>
+            <a class="project-link" href="https://github.com/samirbekirli" target="_blank" rel="noopener noreferrer">
+              Explore public GitHub profile ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <img
+            class="project-image"
+            src="https://res.cloudinary.com/ngxbj12i/image/upload/v1792796042/994f4dbd-784a-4a3d-804c-2b9b92e89f9c.jpg"
+            alt="Digital media and technology image"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85';"
+          >
+          <div class="project-content">
+            <span class="project-type">Digital media</span>
+            <h3>WidGefter</h3>
+            <p>
+              WidGefter is a YouTube channel associated with Samir
+              Bekirli. This section can include the official channel
+              link and verified information about its content.
+            </p>
+            <a class="project-link" href="https://github.com/samirbekirli" target="_blank" rel="noopener noreferrer">
+              View public profile ↗
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="interests">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">03 / Areas of interest</span>
+        <h2>Ideas worth exploring.</h2>
+        <p class="section-desc">
+          Themes connecting technology, digital products, and entrepreneurship.
+        </p>
+      </div>
+
+      <div class="focus-grid">
+        <article class="focus-card reveal">
+          <span class="number">01 — BUILD</span>
+          <h3>Digital Products</h3>
+          <p>Exploring how software and thoughtful product design can solve everyday problems.</p>
+        </article>
+        <article class="focus-card reveal">
+          <span class="number">02 — EXPLORE</span>
+          <h3>Travel Technology</h3>
+          <p>Looking at ways technology can simplify discovering and comparing travel options.</p>
+        </article>
+        <article class="focus-card reveal">
+          <span class="number">03 — CREATE</span>
+          <h3>Digital Creativity</h3>
+          <p>Exploring online content, creative projects, and new opportunities in the digital world.</p>
+        </article>
+      </div>
+
+      <div class="notice reveal">
+        This page describes general areas of interest and projects.
+        It does not imply that every idea listed is a completed product
+        or a launched business.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sources">
+    <div class="container">
+      <div class="source-box reveal">
+        <div>
+          <h3>Explore public information.</h3>
+          <p>Visit the public GitHub profile for project information and published links.</p>
+        </div>
+        <a class="btn primary" href="https://github.com/samirbekirli" target="_blank" rel="noopener noreferrer">
+          Visit GitHub ↗
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>
+      <div class="footer-title">Independent Informational Profile</div>
+      <p class="footer-copy">© <span id="year"></span> · Public information and project links.</p>
+    </div>
+    <p class="disclaimer">
+      Unofficial website. This page is not affiliated with or endorsed
+      by Samir Bekirli. Information should be checked against official
+      sources and project links.
+    </p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const items = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  items.forEach((item) => observer.observe(item));
+} else {
+  items.forEach((item) => item.classList.add("visible"));
+}
+</script>
+
+</body>
+</html>
