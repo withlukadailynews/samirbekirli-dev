@@ -3,26 +3,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Samir Bekirli | Entrepreneur, Developer & Founder of Mitfly</title>
-
-  <meta name="description" content="Learn about Samir Bekirli, a 17-year-old entrepreneur and developer, founder of Mitfly, a flight search and comparison project currently in development.">
-  <meta name="robots" content="index, follow">
+  <title>Samir Bekirli | Entrepreneur, Developer & Mitfly Founder</title>
+  <meta name="description" content="Discover Samir Bekirli, a 17-year-old entrepreneur and developer, founder of Mitfly, a flight search and comparison project in development.">
   <meta name="author" content="Samir Bekirli">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#070b14">
 
   <link rel="canonical" href="https://withlukadailynews.github.io/samirbekirli-dev/">
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Samir Bekirli | Entrepreneur & Developer">
-  <meta property="og:description" content="The personal profile of Samir Bekirli, founder of Mitfly and creator behind his projects.">
+  <meta property="og:description" content="The personal profile of Samir Bekirli, founder of Mitfly and creator of digital projects.">
   <meta property="og:url" content="https://withlukadailynews.github.io/samirbekirli-dev/">
-  <meta property="og:site_name" content="Samir Bekirli">
+  <meta property="og:image" content="https://res.cloudinary.com/ngxbj12i/image/upload/v1792795145/5395400624217725350_119.jpg">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Samir Bekirli | Entrepreneur & Developer">
-  <meta name="twitter:description" content="Discover Samir Bekirli's background, projects, and plans for Mitfly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -36,6 +35,7 @@
       "name": "Samir Bekirli",
       "description": "A 17-year-old entrepreneur and developer. Founder of Mitfly, a flight search and comparison project currently in development.",
       "url": "https://withlukadailynews.github.io/samirbekirli-dev/",
+      "image": "https://res.cloudinary.com/ngxbj12i/image/upload/v1792795145/5395400624217725350_119.jpg",
       "sameAs": [
         "https://samirbekirli.github.io/",
         "https://github.com/samirbekirli",
@@ -47,30 +47,20 @@
         "Travel Technology",
         "Flight Search",
         "Price Comparison"
-      ],
-      "founder": {
-        "@type": "Organization",
-        "name": "Mitfly",
-        "description": "A flight search and comparison project currently in development."
-      }
+      ]
     }
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --bg: #070b14;
-      --panel: #0d1422;
-      --panel2: #101b2d;
+      --panel: #0e1727;
       --text: #f4f7ff;
       --muted: #9ba9c1;
-      --blue: #6a8cff;
-      --cyan: #61d8ef;
-      --border: rgba(164, 185, 224, .14);
+      --blue: #7d9aff;
+      --cyan: #63d7ec;
+      --border: rgba(164,185,224,.15);
       --max: 1120px;
     }
 
@@ -83,11 +73,11 @@
 
     body {
       margin: 0;
-      color: var(--text);
       background:
-        radial-gradient(ellipse at 15% 0%, rgba(49, 88, 180, .18), transparent 38%),
-        radial-gradient(ellipse at 95% 35%, rgba(33, 126, 164, .10), transparent 34%),
+        radial-gradient(ellipse at 12% 0%, #3158b42d, transparent 38%),
+        radial-gradient(ellipse at 100% 38%, #217ea41a, transparent 35%),
         var(--bg);
+      color: var(--text);
       font-family: "DM Sans", sans-serif;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
@@ -95,16 +85,18 @@
 
     a { color: inherit; text-decoration: none; }
 
+    img { display: block; max-width: 100%; }
+
     .container {
       width: min(var(--max), calc(100% - 40px));
-      margin: 0 auto;
+      margin: auto;
     }
 
     .nav-wrap {
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(7, 11, 20, .84);
+      background: #070b14e8;
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(18px);
     }
@@ -114,15 +106,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 11px;
       font-weight: 800;
-      letter-spacing: -.5px;
+      letter-spacing: -.4px;
     }
 
     .brand-mark {
@@ -131,97 +123,93 @@
       display: grid;
       place-items: center;
       border-radius: 12px;
-      color: white;
-      background: linear-gradient(135deg, #6a8cff, #42c9e6);
-      font-family: "Manrope", sans-serif;
-      font-size: 13px;
-      box-shadow: 0 5px 24px #5479ff30;
+      color: #07101e;
+      background: linear-gradient(135deg, #8ca6ff, #53d5e9);
+      font: 800 13px "Manrope", sans-serif;
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 28px;
+      gap: 25px;
       color: var(--muted);
       font-size: 13px;
       font-weight: 600;
     }
 
-    .nav-links a:hover { color: white; }
+    .nav-links a:hover, .footer-links a:hover { color: white; }
 
-    .hero { padding: 104px 0 84px; }
+    .hero { padding: 82px 0 76px; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1.05fr .95fr;
       align-items: center;
-      gap: 65px;
+      gap: 55px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      color: #a9c4ff;
-      border: 1px solid #7898ff35;
-      background: #5379ff10;
-      border-radius: 999px;
       padding: 7px 13px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .5px;
+      border: 1px solid #7898ff35;
+      border-radius: 999px;
+      background: #5379ff10;
+      color: #b5c8ff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
-    .status-dot {
+    .dot {
       width: 7px;
       height: 7px;
-      border-radius: 50%;
       background: #63d8b1;
+      border-radius: 50%;
       box-shadow: 0 0 12px #63d8b180;
     }
 
-    h1, h2, h3, p { margin-top: 0; }
-
     h1, h2, h3 {
       font-family: "Manrope", sans-serif;
-      letter-spacing: -1.5px;
+      letter-spacing: -1.2px;
+      line-height: 1.2;
     }
 
     h1 {
-      margin: 24px 0 20px;
-      font-size: clamp(43px, 6.3vw, 74px);
-      line-height: 1.09;
+      margin: 23px 0 19px;
+      font-size: clamp(42px, 5.8vw, 69px);
       font-weight: 800;
     }
 
-    .gradient-text {
-      background: linear-gradient(100deg, #93adff 10%, #6ddbf0 85%);
+    .gradient {
+      color: #91b5ff;
+      background: linear-gradient(100deg, #93adff, #61d8ef);
       -webkit-background-clip: text;
       background-clip: text;
-      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero-copy {
-      max-width: 610px;
+      max-width: 590px;
       color: var(--muted);
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.9;
     }
 
-    .hero-actions {
+    .actions {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
-      margin-top: 30px;
+      gap: 12px;
+      margin-top: 28px;
     }
 
     .btn {
-      min-height: 48px;
-      padding: 12px 19px;
+      min-height: 46px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
+      padding: 11px 18px;
+      border: 1px solid var(--border);
       border-radius: 12px;
       font-size: 13px;
       font-weight: 700;
@@ -232,82 +220,60 @@
 
     .btn-primary {
       color: #07101e;
+      border-color: transparent;
       background: linear-gradient(110deg, #93adff, #61d8ef);
     }
 
-    .btn-secondary {
-      border: 1px solid var(--border);
-      background: #ffffff05;
-    }
+    .btn-secondary { background: #ffffff05; }
 
-    .profile-card {
+    .hero-photo-wrap {
       position: relative;
-      padding: 30px;
-      overflow: hidden;
-      border: 1px solid #91adff25;
+      padding: 11px;
+      border: 1px solid #91adff28;
       border-radius: 25px;
-      background: linear-gradient(145deg, #17243a, #0b111e 75%);
+      background: linear-gradient(145deg, #17243a, #0b111e);
       box-shadow: 0 35px 100px #00000035;
     }
 
-    .profile-card::before {
-      content: "";
-      position: absolute;
-      width: 230px;
-      height: 230px;
-      right: -100px;
-      top: -110px;
-      border-radius: 50%;
-      background: #6888ff22;
-      filter: blur(5px);
+    .hero-photo {
+      width: 100%;
+      height: 405px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 17px;
+      background: #111b2c;
     }
 
-    .profile-symbol {
-      width: 70px;
-      height: 70px;
-      display: grid;
-      place-items: center;
-      border-radius: 21px;
-      background: linear-gradient(135deg, #6a8cff, #48c7e3);
-      color: #07101e;
-      font: 800 23px "Manrope", sans-serif;
-      margin-bottom: 25px;
-    }
-
-    .profile-card h2 {
-      font-size: 24px;
-      margin-bottom: 5px;
-      letter-spacing: -.7px;
-    }
-
-    .profile-role {
-      color: #aab8d1;
-      font-size: 13px;
-      margin-bottom: 23px;
-    }
-
-    .profile-line {
-      height: 1px;
-      background: var(--border);
-      margin: 20px 0;
-    }
-
-    .profile-meta {
+    .photo-caption {
       display: flex;
       justify-content: space-between;
-      gap: 12px;
-      font-size: 13px;
-      padding: 7px 0;
+      align-items: center;
+      gap: 15px;
+      padding: 16px 8px 5px;
     }
 
-    .profile-meta span:first-child { color: var(--muted); }
-    .profile-meta span:last-child { text-align: right; font-weight: 600; }
+    .photo-caption strong {
+      display: block;
+      font-size: 15px;
+    }
 
-    section { padding: 78px 0; }
+    .photo-caption span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .caption-mark {
+      color: #a8bdff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    section { padding: 72px 0; }
 
     .section-head {
-      max-width: 680px;
-      margin-bottom: 34px;
+      max-width: 700px;
+      margin-bottom: 30px;
     }
 
     .section-label {
@@ -318,29 +284,27 @@
       letter-spacing: 2px;
     }
 
-    h2.section-title {
+    .section-title {
       margin: 10px 0 13px;
       font-size: clamp(30px, 4vw, 43px);
-      line-height: 1.2;
     }
 
     .section-description {
       color: var(--muted);
       font-size: 15px;
-      max-width: 650px;
     }
 
     .about-box {
-      border: 1px solid var(--border);
-      background: linear-gradient(145deg, #101a2a, #0b111c);
-      border-radius: 20px;
       padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: linear-gradient(145deg, #101a2a, #0b111c);
     }
 
     .about-box p {
+      margin: 0 0 15px;
       color: #b4bfd2;
       font-size: 15px;
-      margin-bottom: 14px;
     }
 
     .about-box p:last-child { margin-bottom: 0; }
@@ -352,61 +316,74 @@
     }
 
     .project-card {
-      padding: 28px;
-      min-height: 300px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       border: 1px solid var(--border);
       border-radius: 20px;
       background: linear-gradient(145deg, #111b2c, #0a101b);
-      transition: border-color .2s, transform .2s;
+      transition: transform .2s, border-color .2s;
     }
 
     .project-card:hover {
-      border-color: #7a9bff66;
       transform: translateY(-3px);
+      border-color: #7a9bff66;
+    }
+
+    .project-photo {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #111b2c;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 24px;
     }
 
     .project-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 15px;
-      margin-bottom: 24px;
+      gap: 12px;
+      margin-bottom: 15px;
     }
 
     .project-icon {
-      width: 48px;
-      height: 48px;
+      width: 43px;
+      height: 43px;
       display: grid;
       place-items: center;
       border: 1px solid #8aa5ff25;
+      border-radius: 13px;
       background: #7191ff12;
-      border-radius: 15px;
-      color: #9bb3ff;
-      font-size: 22px;
+      color: #a5baff;
+      font-size: 21px;
     }
 
     .pill {
-      font-size: 11px;
-      font-weight: 700;
+      padding: 5px 9px;
       border: 1px solid #61d8ef35;
-      color: #85e3f1;
-      background: #61d8ef0b;
       border-radius: 999px;
-      padding: 6px 10px;
+      background: #61d8ef0b;
+      color: #85e3f1;
+      font-size: 10px;
+      font-weight: 700;
     }
 
     .project-card h3 {
+      margin: 0 0 10px;
       font-size: 24px;
-      margin-bottom: 10px;
       letter-spacing: -.6px;
     }
 
     .project-card p {
       color: var(--muted);
       font-size: 14px;
-      margin-bottom: 23px;
     }
 
     .project-link {
@@ -427,49 +404,46 @@
     .timeline-item {
       padding: 25px;
       border-left: 2px solid #6e91ff;
-      background: #101827a8;
       border-radius: 0 16px 16px 0;
+      background: #101827a8;
     }
 
-    .timeline-item .year {
+    .year {
       color: #91adff;
+      font-size: 11px;
       font-weight: 800;
-      font-size: 12px;
       letter-spacing: 1px;
     }
 
     .timeline-item h3 {
+      margin: 9px 0;
       font-size: 19px;
-      margin: 8px 0;
       letter-spacing: -.5px;
     }
 
     .timeline-item p {
+      margin: 0;
       color: var(--muted);
       font-size: 13px;
-      margin-bottom: 0;
     }
 
     .statement {
-      text-align: center;
-      padding: 43px 30px;
+      padding: 42px 25px;
       border: 1px solid #8ba8ff28;
       border-radius: 23px;
-      background:
-        radial-gradient(ellipse at 50% 0%, #6388ff1c, transparent 70%),
-        #0d1421;
+      text-align: center;
+      background: radial-gradient(ellipse at 50% 0%, #6388ff1c, transparent 70%), #0d1421;
     }
 
     .statement h2 {
+      margin: 10px 0 14px;
       font-size: clamp(27px, 4vw, 39px);
-      line-height: 1.3;
-      margin-bottom: 15px;
     }
 
     .statement p {
-      color: var(--muted);
       max-width: 680px;
-      margin: 0 auto;
+      margin: auto;
+      color: var(--muted);
       font-size: 14px;
     }
 
@@ -478,59 +452,53 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-top: 25px;
+      margin-top: 24px;
     }
 
     footer {
+      padding: 28px 0;
       border-top: 1px solid var(--border);
-      padding: 30px 0;
       color: #8492a9;
       font-size: 12px;
     }
 
     .footer-inner {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a:hover { color: white; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
 
     @media (max-width: 800px) {
-      .hero { padding: 70px 0 50px; }
+      .hero { padding: 58px 0 45px; }
       .hero-grid { grid-template-columns: 1fr; gap: 35px; }
-      .profile-card { max-width: 520px; }
-      .nav-links { gap: 14px; }
+      .hero-photo-wrap { max-width: 560px; }
+      .hero-photo { height: 370px; }
       .cards, .timeline { grid-template-columns: 1fr; }
+      .nav-links { gap: 14px; }
     }
 
     @media (max-width: 520px) {
-      .container { width: min(100% - 28px, var(--max)); }
-      nav { min-height: 68px; }
+      .container { width: calc(100% - 28px); }
+      nav { min-height: 66px; }
       .brand { font-size: 13px; }
       .brand-mark { width: 34px; height: 34px; }
-      .nav-links { gap: 11px; font-size: 11px; }
+      .nav-links { gap: 10px; font-size: 11px; }
       .nav-links a:nth-child(3) { display: none; }
-      h1 { font-size: 43px; }
-      .hero-copy { font-size: 15px; }
-      section { padding: 56px 0; }
-      .about-box, .project-card { padding: 22px; }
-      .statement { padding: 32px 20px; }
+      h1 { font-size: 42px; }
+      section { padding: 53px 0; }
+      .hero-photo { height: 310px; }
+      .about-box, .project-content { padding: 21px; }
+      .project-photo { height: 195px; }
+      .statement { padding: 31px 18px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        transition-duration: .01ms !important;
-      }
+      *, *::before, *::after { transition: none !important; }
     }
   </style>
 </head>
@@ -538,11 +506,10 @@
 <body>
   <div class="nav-wrap">
     <nav class="container" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="Samir Bekirli home">
+      <a class="brand" href="#home">
         <span class="brand-mark">SB</span>
         <span>Samir Bekirli</span>
       </a>
-
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -557,13 +524,13 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">
-            <span class="status-dot"></span>
+            <span class="dot"></span>
             ENTREPRENEUR & DEVELOPER
           </div>
 
           <h1>
             Building ideas<br>
-            into <span class="gradient-text">reality.</span>
+            into <span class="gradient">reality.</span>
           </h1>
 
           <p class="hero-copy">
@@ -572,35 +539,28 @@
             project currently in development.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">Explore projects <span>↗</span></a>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects">Explore projects ↗</a>
             <a class="btn btn-secondary" href="#about">About Samir</a>
           </div>
         </div>
 
-        <aside class="profile-card" aria-label="Profile overview">
-          <div class="profile-symbol">SB</div>
-          <h2>Samir Bekirli</h2>
-          <div class="profile-role">Entrepreneur · Developer · Project Founder</div>
-          <div class="profile-line"></div>
-
-          <div class="profile-meta">
-            <span>Age</span>
-            <span>17</span>
+        <div class="hero-photo-wrap">
+          <img
+            class="hero-photo"
+            src="https://res.cloudinary.com/ngxbj12i/image/upload/v1792795145/5395400624217725350_119.jpg"
+            alt="Samir Bekirli"
+            fetchpriority="high"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85';"
+          >
+          <div class="photo-caption">
+            <div>
+              <strong>Samir Bekirli</strong>
+              <span>Entrepreneur · Developer</span>
+            </div>
+            <span class="caption-mark">PERSONAL PROFILE</span>
           </div>
-          <div class="profile-meta">
-            <span>Founder of</span>
-            <span>Mitfly</span>
-          </div>
-          <div class="profile-meta">
-            <span>Current focus</span>
-            <span>Product development</span>
-          </div>
-          <div class="profile-meta">
-            <span>Project status</span>
-            <span>In development</span>
-          </div>
-        </aside>
+        </div>
       </div>
     </header>
 
@@ -610,8 +570,7 @@
           <div class="section-label">About</div>
           <h2 class="section-title">Who is Samir Bekirli?</h2>
           <p class="section-description">
-            An introduction to the person, his work, and the projects
-            he is building.
+            An introduction to the person, his work, and the projects he is building.
           </p>
         </div>
 
@@ -627,15 +586,13 @@
             and compare prices more easily.
           </p>
           <p>
-            Mitfly is currently under development. According to Samir
-            Bekirli, the project is planned for launch in early 2027.
-            This is a stated target, not a guarantee of a release date.
+            According to Samir Bekirli, Mitfly is currently under
+            development and is planned for launch in early 2027.
+            This is a stated target, not a guaranteed release date.
           </p>
           <p>
-            This website brings together publicly shared information
-            about Samir Bekirli, his projects, and his online presence.
-            It can be updated as new milestones and verified information
-            become available.
+            This website presents publicly shared information about
+            Samir Bekirli, his projects, and his online presence.
           </p>
         </div>
       </div>
@@ -647,51 +604,63 @@
           <div class="section-label">Projects & Activities</div>
           <h2 class="section-title">What he is working on</h2>
           <p class="section-description">
-            Current project information and a link to his YouTube channel.
+            Explore Mitfly's development plans and the WidGefter YouTube channel.
           </p>
         </div>
 
         <div class="cards">
           <article class="project-card">
-            <div class="project-top">
-              <div class="project-icon" aria-hidden="true">✈</div>
-              <span class="pill">In Development</span>
+            <img
+              class="project-photo"
+              src="https://res.cloudinary.com/ngxbj12i/image/upload/v1792795896/14d29865-d3ba-475d-a3a0-dfe42836cea2.jpg"
+              alt="Mitfly project"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=85';"
+            >
+            <div class="project-content">
+              <div class="project-top">
+                <div class="project-icon" aria-hidden="true">✈</div>
+                <span class="pill">In Development</span>
+              </div>
+              <h3>Mitfly</h3>
+              <p>
+                A flight search and comparison project founded by Samir
+                Bekirli. Its goal is to help travelers discover flight
+                options and compare prices more easily.
+              </p>
+              <p>
+                According to its founder, Mitfly is targeting a launch
+                in early 2027. The exact release date has not been confirmed.
+              </p>
+              <a class="project-link" href="#journey">View development status ↗</a>
             </div>
-
-            <h3>Mitfly</h3>
-            <p>
-              A flight search and comparison project founded by Samir
-              Bekirli. Its goal is to help travelers discover available
-              flight options and compare prices in one place.
-            </p>
-            <p>
-              According to its founder, Mitfly is currently in development
-              and is targeting an early 2027 launch.
-            </p>
-            <a class="project-link" href="#journey">
-              View development status <span>↗</span>
-            </a>
           </article>
 
           <article class="project-card">
-            <div class="project-top">
-              <div class="project-icon" aria-hidden="true">▶</div>
-              <span class="pill">YouTube Channel</span>
-            </div>
-
-            <h3>WidGefter</h3>
-            <p>
-              WidGefter is Samir Bekirli's YouTube channel. Visit the
-              channel to explore its videos and published content.
-            </p>
-            <a
-              class="project-link"
-              href="https://www.youtube.com/channel/UCKGYaSeTFzb7S8mq97gcE-A"
-              target="_blank"
-              rel="noopener noreferrer"
+            <img
+              class="project-photo"
+              src="https://res.cloudinary.com/ngxbj12i/image/upload/v1792796042/994f4dbd-784a-4a3d-804c-2b9b92e89f9c.jpg"
+              alt="WidGefter creator project"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85';"
             >
-              Visit WidGefter on YouTube <span>↗</span>
-            </a>
+            <div class="project-content">
+              <div class="project-top">
+                <div class="project-icon" aria-hidden="true">▶</div>
+                <span class="pill">YouTube Channel</span>
+              </div>
+              <h3>WidGefter</h3>
+              <p>
+                WidGefter is Samir Bekirli's YouTube channel. Visit the
+                channel to explore its videos and published content.
+              </p>
+              <a
+                class="project-link"
+                href="https://www.youtube.com/channel/UCKGYaSeTFzb7S8mq97gcE-A"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Visit WidGefter on YouTube ↗</a>
+            </div>
           </article>
         </div>
       </div>
@@ -703,7 +672,7 @@
           <div class="section-label">Project Roadmap</div>
           <h2 class="section-title">The road ahead</h2>
           <p class="section-description">
-            Mitfly's current status and its publicly stated target.
+            Mitfly's current status and its founder's stated target.
           </p>
         </div>
 
@@ -712,8 +681,8 @@
             <div class="year">CURRENT STATUS</div>
             <h3>Development in progress</h3>
             <p>
-              Mitfly is being developed. Product details and availability
-              may change as work continues.
+              Mitfly is currently being developed. Product details and
+              availability may change as work continues.
             </p>
           </article>
 
@@ -722,8 +691,7 @@
             <h3>Planned launch</h3>
             <p>
               Samir Bekirli has stated that Mitfly is planned to launch
-              in early 2027. The exact release date has not been confirmed
-              on this website.
+              in early 2027. This is a target, not a confirmed release date.
             </p>
           </article>
         </div>
@@ -746,13 +714,11 @@
                target="_blank" rel="noopener noreferrer">
               Personal Website ↗
             </a>
-
             <a class="btn btn-secondary"
                href="https://github.com/samirbekirli"
                target="_blank" rel="noopener noreferrer">
               GitHub Profile ↗
             </a>
-
             <a class="btn btn-primary"
                href="https://www.youtube.com/channel/UCKGYaSeTFzb7S8mq97gcE-A"
                target="_blank" rel="noopener noreferrer">
@@ -766,17 +732,15 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>
-        © <span id="year">2026</span> Samir Bekirli. Informational profile.
-      </div>
+      <div>© <span id="year">2026</span> Samir Bekirli. Informational profile.</div>
       <div class="footer-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="https://samirbekirli.github.io/" target="_blank" rel="noopener noreferrer">Personal Website</a>
       </div>
       <div>
-        Mitfly's development and launch information is based on
-        statements attributed to its founder.
+        Mitfly development and launch information is based on statements
+        attributed to its founder. This website is an informational profile.
       </div>
     </div>
   </footer>
@@ -787,4 +751,3 @@
   </script>
 </body>
 </html>
-
