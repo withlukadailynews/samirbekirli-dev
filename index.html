@@ -39,8 +39,7 @@ nav{min-height:76px;display:flex;align-items:center;justify-content:space-betwee
 .nav-links a:hover,.footer-links a:hover{color:#fff}
 .hero{padding:82px 0 76px}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 13px;border:1px solid #7898ff35;border-radius:999px;background:#5379ff10;color:#b5c8ff;font-size:11px;font-weight:800;letter-spacing:1px}
-.dot{width:7px;height:7px;background:#63d8b1;border-radius:50%;box-shadow:0 0 12px #63d8b180}
+.hero-logo{height:clamp(64px,9vw,104px);width:auto;max-width:100%;object-fit:contain}
 h1,h2,h3{font-family:"Manrope",sans-serif;letter-spacing:-1.2px;line-height:1.2}
 h1{margin:23px 0 19px;font-size:clamp(42px,5.8vw,69px);font-weight:800}
 .gradient{background:linear-gradient(100deg,#93adff,#61d8ef);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
@@ -52,7 +51,7 @@ h1{margin:23px 0 19px;font-size:clamp(42px,5.8vw,69px);font-weight:800}
 .btn-secondary{background:#ffffff0a;backdrop-filter:blur(8px)}
 .glass{background:linear-gradient(145deg,rgba(23,36,58,.78),rgba(11,17,30,.78));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .hero-photo-wrap{padding:11px;border:1px solid #91adff28;border-radius:25px;box-shadow:0 35px 100px #00000050}
-.hero-photo{width:100%;height:405px;object-fit:cover;object-position:center 25%;border-radius:17px;background:#111b2c}
+.hero-photo{width:100%;height:auto;border-radius:17px;background:#111b2c}
 .photo-caption{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:16px 8px 5px}
 .photo-caption strong{display:block;font-size:15px}
 .photo-caption span{display:block;color:var(--muted);font-size:12px}
@@ -89,8 +88,8 @@ section{padding:72px 0}
 footer{padding:28px 0;border-top:1px solid var(--border);color:#8492a9;font-size:12px;background:rgba(7,11,20,.6)}
 .footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
 .footer-links{display:flex;flex-wrap:wrap;gap:16px}
-@media(max-width:800px){.hero{padding:58px 0 45px}.hero-grid{grid-template-columns:1fr;gap:35px}.hero-photo-wrap{max-width:560px}.hero-photo{height:370px}.cards,.timeline{grid-template-columns:1fr}.nav-links{gap:14px}}
-@media(max-width:520px){.container{width:calc(100% - 28px)}nav{min-height:66px}.brand{font-size:15px}.nav-links{gap:10px;font-size:11px}.nav-links a:nth-child(3){display:none}h1{font-size:42px}section{padding:53px 0}.hero-photo{height:310px}.about-box,.project-content{padding:21px}.project-photo{height:195px}.statement{padding:31px 18px}}
+@media(max-width:800px){.hero{padding:58px 0 45px}.hero-grid{grid-template-columns:1fr;gap:35px}.hero-photo-wrap{max-width:560px}.cards,.timeline{grid-template-columns:1fr}.nav-links{gap:14px}}
+@media(max-width:520px){.container{width:calc(100% - 28px)}nav{min-height:66px}.brand{font-size:15px}.nav-links{gap:10px;font-size:11px}.nav-links a:nth-child(3){display:none}h1{font-size:42px}section{padding:53px 0}.about-box,.project-content{padding:21px}.project-photo{height:195px}.statement{padding:31px 18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 </style>
 </head>
@@ -109,7 +108,7 @@ footer{padding:28px 0;border-top:1px solid var(--border);color:#8492a9;font-size
  <header class="hero" id="home">
   <div class="container hero-grid">
    <div>
-    <div class="eyebrow"><span class="dot"></span>ENTREPRENEUR &amp; DEVELOPER</div>
+    <img class="hero-logo" src="https://res.cloudinary.com/ltltiopj/image/upload/v1793000817/e1be2a0f-59ed-4127-b1bf-c8153546bc71-removebg-preview.png" alt="Samir Bekirli logo">
     <h1>Building ideas<br>into <span class="gradient">reality.</span></h1>
     <p class="hero-copy">Samir Bekirli is an entrepreneur and developer, and the founder of Mitfly, a flight search and comparison project currently in development. According to Samir, Mitfly has received more than $70,000 in investment.</p>
     <div class="actions"><a class="btn btn-primary" href="#projects">Explore projects ↗</a><a class="btn btn-secondary" href="#about">About Samir</a></div>
@@ -221,5 +220,7 @@ document.getElementById("year").textContent=new Date().getFullYear();
  else{document.querySelector(".bg-wrap").remove();document.querySelector(".bg-overlay").remove();}
 })();
 </script>
+</body>
+</html>
 </body>
 </html>
